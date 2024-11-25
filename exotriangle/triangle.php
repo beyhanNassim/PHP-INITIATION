@@ -7,5 +7,4 @@ function triangle($nb){
         echo "<br>";
     }
 }
-triangle(5);
 ?>
