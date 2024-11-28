@@ -1,5 +1,9 @@
+
+
 function verifierFormulaire() {
   var nameField = document.getElementById("name");
+  var email = document.querySelector('[name="email"]');
+
   if (nameField.value.trim() === '') {
       nameField.style.borderColor = "red";
   } else {
@@ -13,6 +17,18 @@ function verifierFormulaire() {
       firstNameField.style.borderColor = "green";
   }
 
+  var email = document.querySelector('[name="email"]');
+
+
+  if (email.value.trim() === "") {
+    email.style.borderColor ="red"
+  }else{
+    email.style.borderColor ="green"
+  }
+
+
+
+  
   var passwordField = document.getElementById("password");
   let alertMessage = document.querySelector(".text-danger");
 
@@ -31,26 +47,14 @@ function verifierFormulaire() {
       messageField.style.borderColor = "green";
   }
 
-  let ageCheckbox = document.getElementById("formCheck-1");
-  let ageLabel = document.querySelector(".form-check-label");
+ let ageCheckbox = document.getElementById("age");
+  let ageLabel = document.querySelector('label[for= "formCheck-1"]');
 
   if (ageCheckbox.checked) {
       ageLabel.style.color = "green";
   } else {
       ageLabel.style.color = "red";
   }
-}
 
-function verifemail() {
-  let emailField = document.getElementById("email");
-
-  if (emailField.value.trim() !== '') {
-      if (emailField.value.includes("@")) {
-          emailField.style.borderColor = "green";
-      } else {
-          emailField.style.borderColor = "red";
-      }
-  } else {
-      emailField.style.borderColor = "red";
-  }
+  
 }
